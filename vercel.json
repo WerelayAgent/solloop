@@ -2,6 +2,8 @@
   "version": 2,
   "outputDirectory": ".",
   "rewrites": [
+    { "source": "/api/rpc", "destination": "/api/rpc.js" },
+    { "source": "/api/(.*)", "destination": "https://loopup.fun/api/$1" },
     { "source": "/welcome", "destination": "/welcome.html" },
     { "source": "/explore", "destination": "/explore.html" },
     { "source": "/explore/(.*)", "destination": "/explore.html" },
