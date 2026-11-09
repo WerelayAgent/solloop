@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/welcome", "destination": "/index.html" },
+    { "source": "/explore", "destination": "/explore.html" },
+    { "source": "/degen", "destination": "/degen.html" },
+    { "source": "/loopers", "destination": "/loopers.html" },
+    { "source": "/create", "destination": "/create.html" },
+    { "source": "/docs", "destination": "/docs.html" },
+    { "source": "/analytics", "destination": "/analytics.html" },
+    { "source": "/support", "destination": "/support.html" },
+    { "source": "/terms", "destination": "/terms.html" },
+    { "source": "/privacy", "destination": "/privacy.html" },
+    { "source": "/opengraph-image", "destination": "/opengraph-image.png" },
+    { "source": "/apple-icon", "destination": "/apple-icon.png" },
+    { "source": "/api/:path*", "destination": "https://loopup.fun/api/:path*" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    }
+  ]
+}
