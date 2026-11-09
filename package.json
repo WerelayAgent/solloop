@@ -2,18 +2,7 @@
   "name": "solloop",
   "version": "1.0.0",
   "description": "SolLoop ($SOLLOOP) - The Proof-of-Call Token Launchpad & SocialFi Platform on Solana",
-  "scripts": {
-    "start": "npx serve ."
-  },
-  "keywords": [
-    "solana",
-    "launchpad",
-    "socialfi",
-    "solloop",
-    "raydium",
-    "meteora",
-    "crypto"
-  ],
-  "author": "SolLoop Team",
+  "main": "index.html",
+  "author": "WerelayAgent",
   "license": "MIT"
 }
