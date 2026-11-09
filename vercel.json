@@ -1,6 +1,6 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
+  "version": 2,
+  "outputDirectory": ".",
   "rewrites": [
     { "source": "/welcome", "destination": "/index.html" },
     { "source": "/explore", "destination": "/explore.html" },
@@ -14,5 +14,15 @@
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/opengraph-image", "destination": "/opengraph-image.png" },
     { "source": "/apple-icon", "destination": "/apple-icon.png" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    }
   ]
 }
