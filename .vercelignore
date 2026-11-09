@@ -1,0 +1,6 @@
+.git
+.github
+raw
+*.log
+scratch
+node_modules
